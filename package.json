@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev",
+    "dev": "turbo run dev --filter=!./tools/template",
     "lint:check": "turbo lint:check check-types && npm run format",
     "lint:fix": "turbo lint:fix && npm run format:fix",
     "format": "prettier --check ./**/*.{ts,tsx,js}",
@@ -20,12 +20,13 @@
     "@thaitype/ioctopus": "^2.1.1"
   },
   "devDependencies": {
-    "turbo": "^2.4.4",
     "@vitest/coverage-istanbul": "^3.0.9",
-    "typescript": "^5.8.2",
-    "eslint": "^9.22.0",
     "esbuild": "^0.25.1",
+    "eslint": "^9.22.0",
     "prettier": "^3.5.3",
+    "tsx": "^4.19.4",
+    "turbo": "^2.4.4",
+    "typescript": "^5.8.2",
     "vitest": "^3.0.9"
   },
   "prettier": {
